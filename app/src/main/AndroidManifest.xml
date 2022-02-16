@@ -21,10 +21,12 @@
         <activity android:name=".GpsActivity">
 
         </activity>
+        <!-- map appid key -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="1d18b15cd5a26ef9ac615fb28145b765" />
 
+        <!-- map service -->
         <service android:name="com.amap.api.location.APSService"></service>
         <service android:name=".KeepLiveService" />
     </application>

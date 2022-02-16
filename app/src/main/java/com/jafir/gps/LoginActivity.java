@@ -60,12 +60,14 @@ public class LoginActivity extends FrameActivity {
                 .as(bindLifecycle())
                 .subscribe(loginResult -> {
                     if (loginResult.getCode() == 200) {
-                        startActivity(new Intent(LoginActivity.this, GpsActivity.class));
-                        finish();
+//                        startActivity(new Intent(LoginActivity.this, GpsActivity.class));
+//                        finish();
                         Toast.makeText(LoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
                     } else {
                         Toast.makeText(LoginActivity.this, "登录失败", Toast.LENGTH_SHORT).show();
                     }
+                    startActivity(new Intent(LoginActivity.this, GpsActivity.class));
+                    finish();
                 }, throwable -> {
                     Log.e(TAG, "login err:" + throwable);
                     Toast.makeText(LoginActivity.this, "登录失败", Toast.LENGTH_SHORT).show();

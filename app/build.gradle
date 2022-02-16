@@ -73,8 +73,10 @@ dependencies {
 
     implementation "com.github.tbruyelle:rxpermissions:$rootProject.rxpermissionsVersion"
 
+    /* map jar*/
     implementation  'com.amap.api:location:4.9.0'
     implementation 'com.amap.api:map2d:6.0.0'
 
+    /* AbsWorkService service jar */
     implementation 'com.xdandroid:hellodaemon:+'
 }

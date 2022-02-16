@@ -18,6 +18,8 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         startAlarm();
+
+        /* init service */
         DaemonEnv.initialize(this, KeepLiveService.class, 3 * 60 * 1000);
     }
 
